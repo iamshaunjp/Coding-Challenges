@@ -16,10 +16,72 @@ main {
 
 /* solution styles */
 
-
+.menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+header {
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  color: #eee;
+}
+nav {
+  background: #222;
+  z-index: 0;
+  top: 0;
+  padding: 20px;
+  padding-top: 80px;
+  height: 100%;
+  box-sizing: border-box;
+  width: 200px;
+  left: -200px;
+  position: absolute;
+}
+nav a {
+  color: #fff;
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1.2em;
+}
+.burger {
+  z-index: 1;
+  display: relative;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.burger span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #eee;
+  margin-bottom: 5px;
+}
 
 /* open state */
 
-
+nav.open {
+  left: 0;
+}
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+}
+.burger.open span:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px);
+}
 
 /* transitions */
+nav {
+  transition: left ease-in 0.3s;
+}
+.burger span {
+  transition: all ease-in 0.3s;
+}
