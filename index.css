@@ -1,0 +1,25 @@
+/* start styles */
+
+body {
+  margin: 0;
+  background: #444;
+  font-family: Poppins;
+}
+li, ul {
+  list-style-type: none;
+  padding: 0;
+}
+main {
+  padding: 140px 40px 40px;
+  color: #bbb;
+}
+
+/* solution styles */
+
+
+
+/* open state */
+
+
+
+/* transitions */
