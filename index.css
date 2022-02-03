@@ -1,9 +1,10 @@
 /* start styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=VT323&display=swap');
 
 body {
   margin: 0;
   background: #444;
-  font-family: Poppins;
+  font-family: "Poppins";
 }
 li, ul {
   list-style-type: none;
