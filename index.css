@@ -17,10 +17,112 @@ main {
 
 /* solution styles */
 
+.menu {
+  padding: 30px;
+  background-color: rgb(43, 43, 43);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
 
+/* burger-icon size */
+.burger-container, .burger-icon {
+  height: 30px;
+  width: 40px;
+}
+
+.burger-container {
+  display: inline-block;
+}
+
+.burger-icon {
+  position: absolute;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+.burger-line, .burger-icon::before, .burger-icon::after{
+  content: '';
+  position: absolute;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #fff;
+  transform-origin: 0 0;
+}
+
+.burger-icon::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.burger-line {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  margin-top: -1px;
+  opacity: 1;
+}
+
+.burger-icon::after {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.menu-body {
+  position: fixed;
+  z-index: 1000;
+  width: 300px;
+  background-color: rgb(20, 20, 20);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding: 150px 20px 20px 20px;
+  transform: translateX(-300px);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.menu-body > ul{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-body li a {
+  color: #fff;
+  font-size: 20px;
+}
 
 /* open state */
 
+.menu.open > .menu-body {
+  transform: translateX(0);
+}
 
+.menu.open .burger-line {
+  opacity: 0;
+}
+
+.menu.open .burger-icon::before {
+  transform: rotate(45deg);
+}
+
+.menu.open .burger-icon::after {
+  transform: rotate(-45deg);
+}
 
 /* transitions */
+
+.menu-body, .burger-line, .burger-icon::before, .burger-icon::after {
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
