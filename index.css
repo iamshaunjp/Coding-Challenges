@@ -74,6 +74,13 @@ li a {
   left: calc(-12.5vw - 4rem);
   transition: 0.3s;
 }
+.slideOverlay {
+  position: absolute;
+  display: none;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+}
 
 /* transitions */
 .line:nth-child(1).active {
@@ -90,4 +97,7 @@ li a {
 
 .slideMenu.active {
   left: 0;
+}
+.slideOverlay.active {
+  display: block;
 }
