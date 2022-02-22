@@ -59,14 +59,14 @@ li a {
   transform-origin: left;
   transition: 0.3s;
 }
-.lineNum1 {
+.line:nth-child(1) {
   top: 9px;
 }
-.lineNum2 {
+.line:nth-child(2) {
   top: 21px;
   opacity: 1;
 }
-.lineNum3 {
+.line:nth-child(3) {
   top: 33px;
 }
 
@@ -76,18 +76,18 @@ li a {
 }
 
 /* transitions */
-.lineNum1.active {
+.line:nth-child(1).active {
   top: 5px;
   transform: rotate(45deg);;
 }
-.lineNum2.active {
+.line:nth-child(2).active {
   opacity: 0;
 }
-.lineNum3.active {
+.line:nth-child(3).active {
   top: 37px;
   transform: rotate(-45deg);
 }
 
 .slideMenu.active {
-  left: 0px;
+  left: 0;
 }
