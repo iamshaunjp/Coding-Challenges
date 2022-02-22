@@ -16,11 +16,78 @@ main {
 }
 
 /* solution styles */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #eee;
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+}
+.triggerIcon {
+  position: relative;
+  height: 45px;
+  width: 46px;
+  cursor: pointer;
+  z-index: 9999;
+}
+.line {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #eee;
+}
 
-
+.slideMenu {
+  position: fixed;
+  inset: 0;
+  width: 12.5vw;
+  height: 100vh;
+  padding: 2rem ;
+  background-color: #222;
+}
+.slideMenu ul {
+  margin-top: 6rem;
+}
+li a {
+  color: #eee;
+  font-size: 1.5rem;
+}
 
 /* open state */
+.line {
+  transform-origin: left;
+  transition: 0.3s;
+}
+.lineNum1 {
+  top: 9px;
+}
+.lineNum2 {
+  top: 21px;
+  opacity: 1;
+}
+.lineNum3 {
+  top: 33px;
+}
 
-
+.slideMenu {
+  left: calc(-12.5vw - 4rem);
+  transition: 0.3s;
+}
 
 /* transitions */
+.lineNum1.active {
+  top: 5px;
+  transform: rotate(45deg);;
+}
+.lineNum2.active {
+  opacity: 0;
+}
+.lineNum3.active {
+  top: 37px;
+  transform: rotate(-45deg);
+}
+
+.slideMenu.active {
+  left: 0px;
+}
