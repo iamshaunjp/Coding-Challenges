@@ -1,0 +1,104 @@
+/* start styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=VT323&display=swap');
+
+body {
+  margin: 0;
+  background: #444;
+  font-family: "Poppins";
+}
+li, ul {
+  list-style-type: none;
+  padding: 0;
+}
+main {
+  padding: 140px 40px 40px;
+  color: #bbb;
+}
+
+/* solution styles */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #eee;
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+}
+.triggerIcon {
+  position: relative;
+  height: 45px;
+  width: 46px;
+  cursor: pointer;
+  z-index: 9999;
+}
+.line {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #eee;
+  border-radius: 2px;
+}
+
+.slideMenu {
+  position: fixed;
+  inset: 0;
+  width: 12.5vw;
+  height: 100vh;
+  padding: 2rem ;
+  background-color: #222;
+}
+.slideMenu ul {
+  margin-top: 6rem;
+}
+li a {
+  color: #eee;
+  font-size: 1.5rem;
+}
+
+/* open state */
+.line {
+  transform-origin: left;
+  transition: 0.3s;
+}
+.line:nth-child(1) {
+  top: 9px;
+}
+.line:nth-child(2) {
+  top: 21px;
+  opacity: 1;
+}
+.line:nth-child(3) {
+  top: 33px;
+}
+
+.slideMenu {
+  left: calc(-12.5vw - 4rem);
+  transition: 0.3s;
+}
+.slideOverlay {
+  position: absolute;
+  display: none;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* transitions */
+.menu.active .line:nth-child(1) {
+  top: 5px;
+  transform: rotate(45deg);;
+}
+.menu.active .line:nth-child(2) {
+  opacity: 0;
+}
+.menu.active .line:nth-child(3) {
+  top: 37px;
+  transform: rotate(-45deg);
+}
+
+.menu.active .slideMenu {
+  left: 0;
+}
+.menu.active .slideOverlay {
+  display: block;
+}
