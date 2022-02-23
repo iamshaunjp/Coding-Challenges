@@ -36,6 +36,7 @@ main {
   height: 3px;
   width: 100%;
   background-color: #eee;
+  border-radius: 2px;
 }
 
 .slideMenu {
@@ -83,21 +84,21 @@ li a {
 }
 
 /* transitions */
-.line:nth-child(1).active {
+.menu.active .line:nth-child(1) {
   top: 5px;
   transform: rotate(45deg);;
 }
-.line:nth-child(2).active {
+.menu.active .line:nth-child(2) {
   opacity: 0;
 }
-.line:nth-child(3).active {
+.menu.active .line:nth-child(3) {
   top: 37px;
   transform: rotate(-45deg);
 }
 
-.slideMenu.active {
+.menu.active .slideMenu {
   left: 0;
 }
-.slideOverlay.active {
+.menu.active .slideOverlay {
   display: block;
 }
