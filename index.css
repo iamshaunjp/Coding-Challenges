@@ -26,3 +26,18 @@ form input {
 }
 
 /* solution styles */
+
+.tick {
+  color: #55efc4;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: ease-in .2s;
+}
+.tick.ok {
+  transform: translateY(0%);
+  opacity: 1;
+}
+#email.ok {
+  outline: none;
+  border-color: #55efc4;
+}
