@@ -26,3 +26,23 @@ form input {
 }
 
 /* solution styles */
+
+form .field span {
+  opacity: 0;
+  color: #777;
+  transform: translateY(30px);
+  transition: all 0.5s;
+}
+form .field span.matched {
+  opacity: 1;
+  width: unset;
+  color: #05bd7f;
+  transform: translateY(0);
+}
+form input.matched {
+  border: 2px solid #05bd7f;
+}
+
+form input.matched:focus {
+  outline: none;
+}
