@@ -1,0 +1,48 @@
+/* base styles */
+
+body {
+  background: #f2f2f2;
+  text-align: center;
+  font-size: 1.4em;
+  font-family: Verdana;
+}
+form {
+  background: white;
+  margin: 200px auto;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+form .field {
+  display: flex;
+  align-items: center;
+}
+form input {
+  margin: 0 16px;
+  font-size: 0.8em;
+  border: 2px solid #777;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+/* solution styles */
+
+form .field span {
+  opacity: 0;
+  color: #777;
+  transform: translateY(30px);
+  transition: all 0.5s;
+}
+form .field span.matched {
+  opacity: 1;
+  width: unset;
+  color: #05bd7f;
+  transform: translateY(0);
+}
+form input.matched {
+  border: 2px solid #05bd7f;
+}
+
+form input.matched:focus {
+  outline: none;
+}
