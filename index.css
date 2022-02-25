@@ -33,11 +33,11 @@ form input {
   opacity: 0;
   transition: ease-in .2s;
 }
-.tick.ok {
+.ok .tick {
   transform: translateY(0%);
   opacity: 1;
 }
-#email.ok {
+.ok #email {
   outline: none;
   border-color: #55efc4;
 }
