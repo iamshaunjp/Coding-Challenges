@@ -1,0 +1,43 @@
+/* base styles */
+
+body {
+  background: #f2f2f2;
+  text-align: center;
+  font-size: 1.4em;
+  font-family: Verdana;
+}
+form {
+  background: white;
+  margin: 200px auto;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+form .field {
+  display: flex;
+  align-items: center;
+}
+form input {
+  margin: 0 16px;
+  font-size: 0.8em;
+  border: 2px solid #777;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+/* solution styles */
+
+.tick {
+  color: #55efc4;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: ease-in .2s;
+}
+.ok .tick {
+  transform: translateY(0%);
+  opacity: 1;
+}
+.ok #email {
+  outline: none;
+  border-color: #55efc4;
+}
