@@ -1,0 +1,11 @@
+:root {
+  --on: #6948ed;
+  --off: #555;
+  --toggle-width: 80px;
+  --toggle-height: 30px;
+}
+body {
+  background: #333;
+}
+
+/* solution styles */
