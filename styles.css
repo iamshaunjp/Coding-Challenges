@@ -1,47 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=VT323&display=swap');
+
 :root {
-  --on: #6948ed;
-  --off: #555;
-  --toggle-width: 80px;
-  --toggle-height: 30px;
-}
-body {
-  background: #333;
+  --primary: #00b29d;
 }
 
-/* solution styles */
-.toggle input {
-  height: 0;
-  width: 0;
+body {
+  background: #f2f2f2;
+  font-family: "Poppins";
 }
-.toggle .switch {
-  display: block;
+.tabs {
+  width: 600px;
   margin: 100px auto;
-  width: var(--toggle-width);
-  height: var(--toggle-height);
-  padding: 5px;
-  cursor: pointer;
-  background-color: var(--off);
-  border-radius: 40px;
-  transition: all ease 0.3s;
-  position: relative;
 }
-.toggle .switch:before {
-  content: '';
-  display: block;
-  height: var(--toggle-height);
-  width: var(--toggle-height);
-  background: #fff;
-  border-radius: 50%;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  transition: all ease 0.3s;
-}
-.toggle input:checked + .switch {
-  background: var(--on);
-}
-.toggle input:checked + .switch:before {
-  transform: translateX(calc(
-    var(--toggle-width) - var(--toggle-height)
-  ));
-}
+
+/* buttons */
+
+
+/* panels */
