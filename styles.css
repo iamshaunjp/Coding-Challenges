@@ -1,0 +1,49 @@
+:root {
+    --on: #6948ed;
+    --off: #555;
+    --toggle-width: 80px;
+    --toggle-height: 30px;
+  }
+  body {
+    background: #333;
+  }
+  /* solution styles */
+.switch{
+    position: relative;
+    width: var(--toggle-width);
+    height: var(--toggle-height);
+    border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+    background-color: var(--off);
+    padding: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    margin: 350px auto;
+}
+.ball{
+    height: 100%;
+    width: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: white;
+    margin: 0 auto 0 0;
+}
+input[type="checkbox"]{
+    display: none;
+}
+input[type="checkbox"]:checked + .switch{
+    background-color: var(--on);
+}
+input[type="checkbox"]:checked + .switch .ball{
+    margin: 0 0 0 auto;
+}
