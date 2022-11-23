@@ -12,35 +12,17 @@ const flavours = {
 
 // functions
 const flavourize = (inputText, flavour) => {
-  const textArray = inputText.split(' ')
-
-  for (let i = 0; i < textArray.length; i++) {
-
-    if (i % 3 === 0) {
-      const random = Math.floor(Math.random() * flavour.length)
-      textArray[i] = flavour[random]
-    }
-
-  }
-
-  return textArray.join(' ')
+ 
 }
 
 const updateOutput = (text) => {
-  output.textContent = text
+
 }
 
 // event listener
 buttons.forEach(b => {
   b.addEventListener('click', (e) => {
 
-    e.preventDefault()
-
-    if (textarea.value) {
-      const f = e.target.dataset.flavour
-      const text = flavourize(textarea.value, flavours[f])
-      updateOutput(text)
-    }
 
   })
 })
