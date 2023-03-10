@@ -18,47 +18,4 @@ section > div {
   text-align: left;
   height: 30px;
   line-height: 30px;
-
-  overflow: hidden;
-}
-
-
-/* solution */
-div.word-list span {
-  display: block;
-}
-div.word-list {
-  position: relative;
-  animation: cycle ease 5s infinite;
-}
-
-@keyframes cycle {
-  0% {top: 0}
-  10% {top: 0}
-  20% {top: -30px}
-  30% {top: -30px}
-  40% {top: -60px;}
-  50% {top: -60px;}
-  60% {top: -90px;}
-  70% {top: -90px;}
-  80% {top: -120px;}
-  90% {top: -120px;}
-  100% {top: 0px;}
-}
-
-/* colors */
-span:nth-child(1) {
-  color:#ff4258;
-}
-span:nth-child(2) {
-  color:#72ff7a;
-}
-span:nth-child(3) {
-  color:#f7f76f;
-}
-span:nth-child(4) {
-  color:#9759fa;
-}
-span:nth-child(5) {
-  color:#03c7fd;
 }
