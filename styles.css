@@ -15,17 +15,21 @@ h1 {
 }
 section > div {
   display: inline-block;
+  text-align: left;
   height: 30px;
   line-height: 30px;
+
   overflow: hidden;
 }
-div.word-list {
-  text-align: left;
-  position: relative;
-  animation: cycle ease 5s infinite;
-}
+
+
+/* solution */
 div.word-list span {
   display: block;
+}
+div.word-list {
+  position: relative;
+  animation: cycle ease 5s infinite;
 }
 
 @keyframes cycle {
