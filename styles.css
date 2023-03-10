@@ -25,17 +25,3 @@ form img {
   width: 200px; 
   margin: 0 auto;
 }
-
-/* solution */
-form img.open {
-  display: block;
-}
-form img.closed {
-  display: none;
-}
-form:has(input[type="password"]:valid:focus) img.open {
-  display: none;
-}
-form:has(input[type="password"]:valid:focus) img.closed {
-  display: block;
-}
